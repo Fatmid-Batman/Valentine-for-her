@@ -365,6 +365,15 @@
         yesBtn.addEventListener('click', function() {
             successMessage.classList.add('active');
             createFloatingHearts();
+
+                    // WhatsApp auto message
+            const phone = "923144080595"; // Whatsapp number where to send the message
+            const message = "Yes Fatmid, I will be your Valentine this year. I love you";
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+            setTimeout(() => {
+                window.open(url, "_blank");
+            }, 1500); // opens after 1.5 seconds
         });
 
         // Create floating hearts animation
